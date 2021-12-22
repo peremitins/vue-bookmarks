@@ -5,17 +5,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    bookmarks: JSON.parse(localStorage.getItem('books')) || [
-      {
-        id: 0, name: 'Yandex', url: 'https://ya.ru/',
-      },
-      {
-        id: 1, name: 'Notion', url: 'https://www.notion.so/',
-      },
-      {
-        id: 2, name: 'Youtube', url: 'https://www.youtube.com/',
-      },
-    ],
+    bookmarks: JSON.parse(localStorage.getItem('books')) || [],
     currentBookmark: null,
     isOpenFormPopup: false,
     searchWord: null,
