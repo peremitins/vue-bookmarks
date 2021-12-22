@@ -1,0 +1,123 @@
+/* form */
+.invalid {
+  font-size: 10px;
+  color: red;
+}
+input {
+  border: none;
+  outline: none;
+}
+.form__wrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.form__wrapper .form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 512px;
+  width: 90%;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255);
+  z-index: 1;
+}
+.form__title {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+.form__field-name {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+.form__input {
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: rgb(201, 201, 201);
+
+}
+.form__btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  padding: 8px 16px;
+  background-color: #1a73e8;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: .7;
+}
+/* v-select */
+.vs__selected {
+  display: none;
+}
+.vs__selected-options {
+  opacity: 0;
+  width: 0;
+}
+.vs__actions svg {
+  display: none;
+}
+.vs--searchable .vs__dropdown-toggle {
+  cursor: pointer;
+}
+.vs__dropdown-menu {
+  top: 0;
+  right: 0;
+  left: auto;
+}
+.vs__dropdown-toggle {
+  border: none;
+}
+.vs--searchable .vs__dropdown-toggle::before {
+  content: url('../assets/svg/elipsys.svg');
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+.vs--searchable .vs__dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background-color ease .3s;
+}
+.vs--searchable .vs__dropdown-toggle:hover {
+  background-color: rgb(212, 212, 212);
+}
+.vs__search, .vs__search:focus {
+  cursor: pointer;
+}
+/* notification */
+.vue-notification {
+  padding: 10px;
+  margin: 0 5px 5px;
+  font-family: sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  font-weight: 100;
+  color: #ffffff;
+  background: #acacac;
+  border-left: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
