@@ -59,7 +59,7 @@ export default {
           title: 'Закладка удалена',
         });
       } else if (value === 'Редактировать') {
-        this.OPEN_FORM_POPUP(bookmark.url);
+        this.OPEN_FORM_POPUP(bookmark.id);
       }
     },
   },

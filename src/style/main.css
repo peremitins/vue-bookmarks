@@ -1,5 +1,6 @@
 /* form */
-.invalid {
+.invalid,
+.invalidUrl {
   font-size: 10px;
   color: red;
 }

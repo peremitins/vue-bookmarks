@@ -37,7 +37,7 @@ const store = new Vuex.Store({
       localStorage.setItem('books', JSON.stringify(state.bookmarks));
     },
     OPEN_FORM_POPUP(state, payload) {
-      const currentIdx = state.bookmarks.findIndex(el => el.url === payload);
+      const currentIdx = state.bookmarks.findIndex(el => el.id === payload);
       state.currentBookmark = currentIdx;
       state.isOpenFormPopup = true;
     },
@@ -47,6 +47,7 @@ const store = new Vuex.Store({
     SAVE_BOOKMARK(state, payload) {
       state.bookmarks[state.currentBookmark].name = payload.name;
       state.bookmarks[state.currentBookmark].url = payload.url;
+      state.bookmarks[state.currentBookmark].id = payload.id;
     },
     FILTERED_BOOKMARK(state, word) {
       if (!word || word === '{}') {

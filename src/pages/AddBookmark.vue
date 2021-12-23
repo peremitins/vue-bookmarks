@@ -28,8 +28,13 @@
           />
           <span
             v-if="$v.url.$dirty && !$v.url.required"
-            class="helper-text invalid"
+            class="invalid"
             >Введите URL</span
+          >
+          <span
+            v-else-if="$v.url.$dirty && !$v.url.url"
+            class="invalidUrl"
+            >Невалидный URL</span
           >
         </div>
 
@@ -44,7 +49,7 @@
 
 <script>
 import { mapMutations } from 'vuex';
-import { required } from 'vuelidate/lib/validators';
+import { required, url } from 'vuelidate/lib/validators';
 
 export default {
   data() {
@@ -55,7 +60,7 @@ export default {
   },
   validations: {
     title: { required },
-    url: { required },
+    url: { required, url },
   },
   methods: {
     ...mapMutations(['ADD_BOOKMARK']),

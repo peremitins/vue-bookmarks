@@ -29,8 +29,13 @@
           />
           <span
             v-if="$v.url.$dirty && !$v.url.required"
-            class="helper-text invalid"
+            class="invalid"
             >Введите URL</span
+          >
+          <span
+            v-else-if="$v.url.$dirty && !$v.url.url"
+            class="invalidUrl"
+            >Невалидный URL</span
           >
         </div>
         <div class="form__btn-wrapper">
@@ -46,7 +51,7 @@
 </template>
 
 <script>
-import { required } from 'vuelidate/lib/validators';
+import { required, url } from 'vuelidate/lib/validators';
 import { mapMutations } from 'vuex';
 
 export default {
@@ -54,11 +59,12 @@ export default {
     return {
       title: this.$store.getters.getBookmarks[this.$store.state.currentBookmark].name,
       url: this.$store.getters.getBookmarks[this.$store.state.currentBookmark].url,
+      id: this.$store.getters.getBookmarks[this.$store.state.currentBookmark].id,
     };
   },
   validations: {
     title: { required },
-    url: { required },
+    url: { required, url },
   },
   methods: {
     ...mapMutations(['CLOSE_FORM_POPUP', 'SAVE_BOOKMARK']),
@@ -71,7 +77,7 @@ export default {
         return;
       }
       this.SAVE_BOOKMARK({
-        name: this.title, url: this.url,
+        name: this.title, url: this.url, id: this.id,
       });
       this.$notify({
         group: 'notification',
