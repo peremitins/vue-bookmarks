@@ -1,8 +1,8 @@
 # my-project
-#### https://allfreelance.github.io/vue-bookmarks/
+#### https://peremitins.github.io/vue-bookmarks/
 
-[![](https://github.com/allfreelance/vue-bookmarks/blob/main/screen.jpg)](https://allfreelance.github.io/vue-bookmarks/)
-[![](https://github.com/allfreelance/vue-bookmarks/blob/main/screen-2.jpg)](https://allfreelance.github.io/vue-bookmarks/)
+[![](https://github.com/peremitins/vue-bookmarks/blob/main/screen.jpg)](https://peremitins.github.io/vue-bookmarks/)
+[![](https://github.com/peremitins/vue-bookmarks/blob/main/screen-2.jpg)](https://peremitins.github.io/vue-bookmarks/)
 
 > A Vue.js project
 
